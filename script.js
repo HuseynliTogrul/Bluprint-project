@@ -1,5 +1,7 @@
 "use strict";
 
+import products from "./data.js";
+
 const filterBtn = document.querySelectorAll(".filterBtn")
 const filterList = document.querySelectorAll(".filterList")
 const chevronIcon = document.querySelectorAll(".chevronIcon")
@@ -9,6 +11,8 @@ const colorList = document.querySelectorAll("#colorList li")
 const sizeList = document.querySelectorAll("#sizeList li")
 
 const colorListDots = document.querySelectorAll("#colorList li span")
+
+const productsCount = document.getElementById("products-count")
 
 const filteredCategories = []
 const filteredColors = []
@@ -33,8 +37,8 @@ categoryList.forEach((item, index) => {
         } else {
             filteredCategories.push(category)
         }
-
-        console.log(filteredCategories);
+        displayProduct()
+        // console.log(filteredCategories);
     })
 });
 
@@ -45,13 +49,13 @@ colorList.forEach((item, index) => {
         const { color } = item.dataset;
 
         if (filteredColors.includes(color)) {
-            const indexOfColor = filteredColors.indexOf(color) 
+            const indexOfColor = filteredColors.indexOf(color)
             filteredColors.splice(indexOfColor, 1)
         } else {
             filteredColors.push(color)
         }
 
-        console.log(filteredColors);
+        // console.log(filteredColors);
     })
 });
 
@@ -60,15 +64,26 @@ sizeList.forEach((item, index) => {
         item.classList.toggle("bg-black")
         item.classList.toggle("text-white")
 
-        const {size} = item.dataset;
+        const { size } = item.dataset;
 
-        if(filteredSizes.includes(size)){
+        if (filteredSizes.includes(size)) {
             const indexOfSize = filteredSizes.indexOf(size)
-            filteredSizes.splice(indexOfSize,1)
-        }else{
+            filteredSizes.splice(indexOfSize, 1)
+        } else {
             filteredSizes.push(size)
         }
 
-        console.log(filteredSizes);
+        // console.log(filteredSizes);
     })
 })
+
+productsCount.textContent = products.length;
+
+const displayProduct = () => {
+    const filterByCategory = products.filter((product) => {
+        for (let i = 0; i < filteredCategories.length; i++) {
+            return product.category === filteredCategories[i];
+        }
+    })
+    console.log(filterByCategory);
+}
