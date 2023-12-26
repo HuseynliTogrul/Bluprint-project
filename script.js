@@ -37,7 +37,7 @@ categoryList.forEach((item, index) => {
         } else {
             filteredCategories.push(category)
         }
-        displayProduct()
+        displayProducts()
         // console.log(filteredCategories);
     })
 });
@@ -55,6 +55,7 @@ colorList.forEach((item, index) => {
             filteredColors.push(color)
         }
 
+        displayProducts()
         // console.log(filteredColors);
     })
 });
@@ -73,17 +74,34 @@ sizeList.forEach((item, index) => {
             filteredSizes.push(size)
         }
 
+        displayProducts()
         // console.log(filteredSizes);
     })
 })
 
 productsCount.textContent = products.length;
 
-const displayProduct = () => {
+const displayProducts = () => {
     const filterByCategory = products.filter((product) => {
-        for (let i = 0; i < filteredCategories.length; i++) {
-            return product.category === filteredCategories[i];
-        }
+        if (filteredCategories.length === 0 &&
+            filteredColors.length === 0 &&
+            filteredSizes.length === 0
+        )
+            return true
+
+        const categoryCondition = filteredCategories.length === 0 ||
+            filteredCategories.includes(product.category)
+
+        const colorCondition = filteredColors.length === 0 ||
+            filteredColors.includes(product.color)
+
+        const sizeCondition = filteredSizes.some((size) => product.sizes.includes(size))
+
+        return categoryCondition && colorCondition && sizeCondition
+
     })
     console.log(filterByCategory);
 }
+
+
+displayProducts()
