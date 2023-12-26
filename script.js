@@ -95,10 +95,9 @@ const displayProducts = () => {
         const colorCondition = filteredColors.length === 0 ||
             filteredColors.includes(product.color)
 
-        const sizeCondition = filteredSizes.some((size) => product.sizes.includes(size))
+        const sizeCondition = product.sizes.some((size) => filteredSizes.includes(size))
 
         return categoryCondition && colorCondition && sizeCondition
-
     })
     console.log(filterByCategory);
 }
