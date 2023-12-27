@@ -10,7 +10,7 @@ const categories = [...new Set(products.map((product) => product.category))]
 const colors = [...new Set(products.map((product) => product.color))]
 const sizes = [...new Set(products.map((product) => product.sizes).flat())]
 
-const productsEl = document.getElementById("products")
+// const productsEl = document.getElementById("products")
 
 categories.forEach((category) => {
     categoryList.innerHTML += `<li class="cursor-pointer text-black" data-category="${category}">
@@ -35,40 +35,3 @@ sizes.forEach((size) => {
                             <button class="uppercase w-full h-full">${size}</button>
                         </li> `
 })
-
-products.forEach((product) => {
-
-    const Pname = (product.name.split(" ").map((name) => name[0].toUpperCase() + name.slice(1))).join(" ");
-
-    productsEl.innerHTML += `<div class="col-span-4 cursor-pointer productItems">
-                                <a href="./productPage/product.html">
-                                <div class="mb-4 border border-neutral-200 rounded-lg">
-                                    <img
-                                    src="${product.image}"
-                                    alt=""
-                                    class="w-full h-[500px]"
-                                    />
-                                </div>
-                                <div class="flex justify-between font-bold">
-                                    <div>
-                                    <h1 class="text-xl">${Pname}</h1>
-                                    <p class="text-neutral-500">${product.category}</p>
-                                    </div>
-                                    <h1 class="text-2xl">
-                                    <span>${product.price}</span>
-                                    AZN
-                                    </h1>
-                                </div>
-                                </a>
-                            </div>`
-
-    const productItems = document.querySelectorAll(".productItems")
-
-    productItems.forEach((productItem, index) => {
-        productItem.addEventListener("click", (event) => {
-
-            const selectedProduct = products[index];
-            localStorage.setItem("product", JSON.stringify(selectedProduct))
-        })
-    });
-});

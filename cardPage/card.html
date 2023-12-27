@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bluprint</title>
+    <link rel="stylesheet" href="../style.css" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        satoshi: ["Satoshi", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="font-satoshi">
+    <!-- Container -->
+    <div class="container mx-auto">
+        <div>
+            <div class="wrapper mx-auto">
+                <header class="flex justify-between px-5 lg:px-0 py-5 lg:py-10">
+                    <!--[--><a href="/" class=""><svg width="92" height="115" viewBox="0 0 92 115" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" class="w-10 h-12">
+                            <circle cx="29" cy="29" r="29" fill="#1D1D1D"></circle>
+                            <circle cx="68.5" cy="72.5" r="23.5" fill="#FFC700"></circle>
+                            <circle cx="29" cy="99" r="16" fill="#0075FF"></circle>
+                        </svg></a>
+                    <nav class="hidden lg:block">
+                        <ul class="relative h-full flex gap-20">
+                            <li class="h-full flex items-center group">
+                                <div class="space-y-6"><a href="/products" class="text-3xl font-black"
+                                        title="Products"><span>Products<span class="text-supernova">.</span></span></a>
+                                </div>
+                                <!--[-->
+                                <div class="dropdown bg-white z-10 opacity-0 pointer-events-none translate-y-1 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 duration-200 absolute top-full -left-10 rounded-xl border border-gray-100 p-5 shadow"
+                                    data-v-0b88d9b5="" data-v-5326ca2e="">
+                                    <!--[-->
+                                    <div class="flex gap-5" data-v-0b88d9b5="">
+                                        <ul class="space-y-5 w-1/3" data-v-0b88d9b5="">
+                                            <!--[-->
+                                            <li data-v-0b88d9b5="" class="text-xl font-bold"><a
+                                                    href="/products?category=caps"
+                                                    class="opacity-75 block hover:translate-x-2 hover:opacity-100 duration-200"
+                                                    title="Caps">Caps</a></li>
+                                            <li data-v-0b88d9b5="" class="text-xl font-bold"><a
+                                                    href="/products?category=hoodies"
+                                                    class="opacity-75 block hover:translate-x-2 hover:opacity-100 duration-200"
+                                                    title="Hoodies">Hoodies</a></li>
+                                            <li data-v-0b88d9b5="" class="text-xl font-bold"><a
+                                                    href="/products?category=t-shirts"
+                                                    class="opacity-75 block hover:translate-x-2 hover:opacity-100 duration-200"
+                                                    title="T-shirts">T-shirts</a></li>
+                                            <li data-v-0b88d9b5="" class="text-xl font-bold"><a
+                                                    href="/products?category=joggers"
+                                                    class="opacity-75 block hover:translate-x-2 hover:opacity-100 duration-200"
+                                                    title="Jeans">Jeans</a></li>
+                                            <!--]-->
+                                        </ul>
+                                        <div data-v-0b88d9b5="" class="relative h-60 w-2/3 rounded-lg overflow-hidden">
+                                            <img data-v-0b88d9b5="" class="absolute"
+                                                src="https://jevbwpzzqbsvijocmomv.supabase.co/storage/v1/object/public/categories/21178369-57de-4f41-8dbe-11ea99597334/category-caps-01.png"
+                                                alt="[object Object]">
+                                        </div>
+                                    </div>
+                                    <!--]-->
+                                </div>
+                                <!--]-->
+                            </li>
+                            <li class="h-full flex items-center group">
+                                <div class="space-y-6"><a href="/" class="text-3xl font-black"
+                                        title="Collections"><span>Collections<span
+                                                class="text-supernova">.</span></span></a></div>
+                                <!--[-->
+                                <!--]-->
+                            </li>
+                            <li class="h-full flex items-center group relative">
+                                <div class="space-y-6"><a href="/profile" class="text-3xl font-black"
+                                        title="Account"><span>Account<span class="text-supernova">.</span></span></a>
+                                </div>
+                                <!--[-->
+                                <div class="dropdown bg-white z-10 opacity-0 pointer-events-none translate-y-1 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 duration-200 absolute top-full -left-10 rounded-xl border border-gray-100 p-5 shadow"
+                                    data-v-5326ca2e="">
+                                    <!--[-->
+                                    <div class="flex gap-5">
+                                        <ul class="space-y-5">
+                                            <!--[-->
+                                            <li class="text-xl font-bold"><a href="/login"
+                                                    class="opacity-75 block hover:translate-x-2 hover:opacity-100 duration-200"
+                                                    title="Sign In">Sign In</a></li>
+                                            <li class="text-xl font-bold whitespace-nowrap"><a href="/register"
+                                                    class="opacity-75 block hover:translate-x-2 hover:opacity-100 duration-200"
+                                                    title="Create Account">Create Account</a></li>
+                                            <!--]-->
+                                        </ul>
+                                    </div>
+                                    <!--]-->
+                                </div>
+                                <!--]-->
+                            </li>
+                            <li class="h-full flex items-center group">
+                                <div class="space-y-6"><a href="/" class="text-3xl font-black"
+                                        title="Help"><span>Help<span class="text-supernova">.</span></span></a></div>
+                                <!--[-->
+                                <!--]-->
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="flex gap-5">
+                        <div class="relative w-20"><button
+                                class="flex items-center lang-switcher h-full w-full px-4 py-2 group gap-2 bg-cod-gray rounded-md">
+                                <!--[--><svg width="16" height="15" viewBox="0 0 16 15"
+                                    class="group-hover:fill-supernova fill-white">
+                                    <path
+                                        d="M8.15506 0.155029C6.70236 0.155029 5.28228 0.585806 4.0744 1.39288C2.86652 2.19996 1.92509 3.3471 1.36917 4.68922C0.813241 6.03134 0.667786 7.50818 0.951194 8.93297C1.2346 10.3578 1.93415 11.6665 2.96136 12.6937C3.98858 13.7209 5.29733 14.4205 6.72212 14.7039C8.14691 14.9873 9.62375 14.8418 10.9659 14.2859C12.308 13.73 13.4551 12.7886 14.2622 11.5807C15.0693 10.3728 15.5001 8.95273 15.5001 7.50003C15.498 5.55264 14.7235 3.68561 13.3465 2.3086C11.9695 0.931592 10.1024 0.157086 8.15506 0.155029ZM14.3701 7.50003C14.3707 8.29737 14.2172 9.08731 13.9181 9.82642L10.7611 7.88493C10.6269 7.80211 10.4767 7.74845 10.3204 7.72744L8.70876 7.50992C8.48668 7.48096 8.261 7.51818 8.05998 7.61693C7.85897 7.71568 7.69157 7.87156 7.57876 8.06503H6.96291L6.69454 7.50992C6.62034 7.35534 6.51176 7.2198 6.3771 7.11367C6.24245 7.00754 6.08529 6.93363 5.91766 6.8976L5.35266 6.77542L5.90495 5.80503H7.08509C7.27606 5.80465 7.46384 5.75607 7.63102 5.66378L8.49618 5.18635C8.57219 5.14398 8.64325 5.09329 8.70805 5.03522L10.6086 3.3162C10.7991 3.14544 10.9258 2.91483 10.9676 2.66241C11.0095 2.40999 10.964 2.15084 10.8388 1.92772L10.8134 1.88181C11.8769 2.38607 12.7755 3.18159 13.4051 4.17603C14.0346 5.17047 14.3692 6.32306 14.3701 7.50003ZM9.23633 1.37967L9.85006 2.47859L7.94954 4.1976L7.08509 4.67503H5.90495C5.70631 4.67474 5.5111 4.72681 5.339 4.826C5.1669 4.9252 5.02399 5.068 4.92467 5.24003L4.30812 6.31565L3.59127 4.40595L4.36391 2.57888C5.0478 2.05046 5.83453 1.67071 6.67369 1.46396C7.51285 1.25721 8.38594 1.22802 9.23704 1.37825L9.23633 1.37967ZM1.94006 7.50003C1.93912 6.57627 2.14521 5.66404 2.5432 4.8304L3.34409 6.96822C3.41083 7.14523 3.52094 7.30264 3.66432 7.42603C3.80771 7.54943 3.97978 7.63485 4.16475 7.67447L5.67824 8.00005L5.94732 8.5594C6.04071 8.74965 6.18543 8.90998 6.36514 9.0223C6.54486 9.13462 6.7524 9.19445 6.96432 9.19503H7.06885L6.55823 10.3413C6.46826 10.5431 6.43944 10.7669 6.47535 10.9849C6.51125 11.203 6.61029 11.4057 6.76022 11.568L6.7701 11.5779L8.15506 13.0045L8.01805 13.7108C6.39496 13.673 4.85091 13.0024 3.71538 11.8421C2.57984 10.6817 1.94275 9.12355 1.94006 7.50003ZM9.18477 13.6289L9.26458 13.2185C9.29738 13.0442 9.28891 12.8646 9.23986 12.6942C9.1908 12.5237 9.10252 12.3671 8.98208 12.2368C8.97861 12.2337 8.97531 12.2304 8.97219 12.227L7.59006 10.801L8.55762 8.63003L10.1693 8.84755L13.3983 10.8335C12.9305 11.5682 12.3137 12.1966 11.588 12.6781C10.8622 13.1596 10.0435 13.4835 9.18477 13.6289Z">
+                                    </path>
+                                </svg><span class="group-hover:text-supernova uppercase text-white">en</span>
+                                <!--]-->
+                            </button>
+                            <!---->
+                        </div><a href="/cart"
+                            class="router-link-active router-link-exact-active relative bg-cod-gray w-12 h-12 flex items-center justify-center rounded-md outline outline-4 outline-supernova"
+                            aria-current="page"><svg width="21" height="24" viewBox="0 0 21 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="w-4">
+                                <path
+                                    d="M3.37506 22.3756C4.68676 22.3756 5.75011 21.3123 5.75011 20.0005C5.75011 18.6888 4.68676 17.6255 3.37506 17.6255C2.06335 17.6255 1 18.6888 1 20.0005C1 21.3123 2.06335 22.3756 3.37506 22.3756Z"
+                                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path
+                                    d="M16.4376 22.3756C17.7493 22.3756 18.8126 21.3123 18.8126 20.0005C18.8126 18.6888 17.7493 17.6255 16.4376 17.6255C15.1258 17.6255 14.0625 18.6888 14.0625 20.0005C14.0625 21.3123 15.1258 22.3756 16.4376 22.3756Z"
+                                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path d="M16.4379 17.6254H3.37506V1H1" stroke="white" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M3.37451 3.375L19.9999 4.56253L18.8124 12.8752H3.37451" stroke="white"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg><span data-v-773ff567=""
+                                class="absolute top-1/2 -translate-y-1/2 translate-x-1/2 right-0 w-6 h-6 text-sm flex items-center justify-center"><span
+                                    data-v-773ff567=""
+                                    class="badge-bg absolute top-0 left-0 w-full h-full bg-supernova rounded-lg animate-spin"></span><span
+                                    data-v-773ff567=""
+                                    class="relative z-10 text-cod-gray font-black">1</span></span></a><button
+                            class="bg-cod-gray w-12 h-12 flex items-center justify-center rounded-md"><svg width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="w-4">
+                                <path
+                                    d="M22.7996 21.8258L16.1416 15.1027C17.3826 13.611 18.1305 11.6919 18.1305 9.59646C18.1305 4.84881 14.2956 1 9.56524 1C4.83483 1 1 4.84881 1 9.59646C1 14.3441 4.83483 18.1929 9.56524 18.1929C11.7144 18.1929 13.6776 17.3965 15.1816 16.0837L21.8303 22.7986C22.0979 23.0671 22.532 23.0671 22.7996 22.7986C23.0668 22.53 23.0668 22.0947 22.7996 21.8258H22.7996ZM9.56524 16.8288C5.58548 16.8288 2.35913 13.5907 2.35913 9.59646C2.35913 5.6022 5.58548 2.36409 9.56524 2.36409C13.545 2.36409 16.7713 5.6022 16.7713 9.59646C16.7713 13.5907 13.545 16.8288 9.56524 16.8288Z"
+                                    fill="white" stroke="white"></path>
+                            </svg></button>
+                    </div>
+                    <!---->
+                    <!--]-->
+                </header>
+                <main class="px-5 lg:px-0 my-20">
+                    <!--[-->
+                    <!--[-->
+                    <div class="space-y-10">
+                        <h2 class="section-title capitalize flex text-6xl font-black"><span> Cart<span
+                                    class="text-supernova">.</span></span></h2>
+                        <div class="border-y border-neutral-100 py-10">
+                            <div class="pb-10 flex gap-20 overflow-x-auto">
+                                <div class="min-w-fit cart-item">
+                                    <div class="flex flex-col lg:flex-row gap-5">
+                                        <div><a href="/products/t-shirt" class="" title="T-shirt">
+                                                <div class="border border-neutral-200 overflow-hidden rounded-lg"><img
+                                                        class="w-full" src="../assets/images/t-shirt.png"
+                                                        alt="Product T-shirt 01 A"></div>
+                                            </a></div>
+                                        <div class="flex justify-between flex-col w-full">
+                                            <div class="space-y-5">
+                                                <div><a href="/products/t-shirt" class="" title="T-shirt">
+                                                        <h3 class="text-xl font-bold">T-shirt</h3>
+                                                    </a>
+                                                    <div class="font-bold text-neutral-500"><span>T-shirts</span></div>
+                                                </div>
+                                                <div class="flex gap-5">
+                                                    <div title="Orange" class="w-8 h-8 rounded-full item-color-orange">
+                                                    </div>
+                                                    <div title="Extra small"
+                                                        class="text-xs w-14 h-8 flex items-center justify-center rounded-2xl font-bold bg-cod-gray text-white">
+                                                        XS</div>
+                                                </div>
+                                                <div class="font-medium text-xl"><span>24.99 AZN</span></div>
+                                            </div>
+                                            <div class="space-y-5">
+                                                <div class="flex items-center max-w-fit font-black gap-6"><button
+                                                        class="text-3xl">-</button><input
+                                                        class="border max-w-fit h-14 text-2xl text-center rounded-md"
+                                                        type="number" min="1" max="100"><button
+                                                        class="text-3xl">+</button></div><a
+                                                    class="cursor-pointer group flex rounded-lg font-black uppercase duration-200 justify-between items-center bg-cod-gray hover:bg-valencia text-white text-medium px-4 py-3">
+                                                    Remove <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
+                                                        <path
+                                                            d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM15 11H5V9H15V11Z"
+                                                            fill="white"></path>
+                                                    </svg></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flex justify-between flex-col space-y-10 lg:space-y-0 pb-0 lg:flex-row items-center lg:pb-10">
+                            <div class="flex gap-2"><span class="font-medium text-4xl">Subtotal:</span>
+                                <div class="font-black relative max-w-fit text-4xl"><span class="relative z-10">24.99
+                                        AZN </span><img src="../assets/images/Yellow big.png"
+                                        class="absolute -top-1/4 left-0" alt="curved yellow line"></div>
+                            </div>
+                            <button class="w-full flex rounded-lg font-black uppercase duration-200 justify-between items-center bg-[#1d1d1d] hover:bg-[#0075ff] text-white text-xl px-8 py-6">
+                                PLACE YOUR ORDER
+                                <span>
+                                  <img src="../assets/icons/cart.svg" alt="cart">
+                                </span>
+                              </button>
+                        </div>
+                    </div>
+                    <!--]-->
+                    <!--]-->
+                </main>
+                <!---->
+                <!---->
+                <footer
+                    class="flex justify-between flex-col space-y-10 lg:flex-row border-t border-t-neutral-100 py-5 lg:py-10 items-center font-medium">
+                    <!--[-->
+                    <div class="flex items-center flex-col lg:flex-row gap-5 lg:gap-12">
+                        <!--[-->
+                        <div><svg width="47" height="59" viewBox="0 0 47 59" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="w-10">
+                                <ellipse cx="14.8152" cy="14.8783" rx="14.8152" ry="14.8783" fill="#1D1D1D"></ellipse>
+                                <ellipse cx="34.9946" cy="37.1957" rx="12.0054" ry="12.0565" fill="#626262"></ellipse>
+                                <ellipse cx="14.8153" cy="50.7912" rx="8.17391" ry="8.2087" fill="#959595"></ellipse>
+                            </svg></div>
+                        <p>© 2023 BLU. All Rights Reserved</p>
+                        <!--]-->
+                    </div>
+                    <div class="flex items-center flex-col lg:flex-row gap-12">
+                        <!--[-->
+                        <nav>
+                            <ul class="flex flex-col items-center lg:items-start lg:flex-row gap-5 lg:gap-8">
+                                <!--[-->
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="">Terms &amp; Conditions</a></li>
+                                <li><a href="">FAQ</a></li>
+                                <li><a href="">Contact Us</a></li>
+                                <!--]-->
+                            </ul>
+                        </nav>
+                        <div class="relative w-20"><button
+                                class="flex items-center lang-switcher h-full w-full px-4 py-2 group gap-2 bg-cod-gray rounded-md">
+                                <!--[--><svg width="16" height="15" viewBox="0 0 16 15"
+                                    class="group-hover:fill-supernova fill-white">
+                                    <path
+                                        d="M8.15506 0.155029C6.70236 0.155029 5.28228 0.585806 4.0744 1.39288C2.86652 2.19996 1.92509 3.3471 1.36917 4.68922C0.813241 6.03134 0.667786 7.50818 0.951194 8.93297C1.2346 10.3578 1.93415 11.6665 2.96136 12.6937C3.98858 13.7209 5.29733 14.4205 6.72212 14.7039C8.14691 14.9873 9.62375 14.8418 10.9659 14.2859C12.308 13.73 13.4551 12.7886 14.2622 11.5807C15.0693 10.3728 15.5001 8.95273 15.5001 7.50003C15.498 5.55264 14.7235 3.68561 13.3465 2.3086C11.9695 0.931592 10.1024 0.157086 8.15506 0.155029ZM14.3701 7.50003C14.3707 8.29737 14.2172 9.08731 13.9181 9.82642L10.7611 7.88493C10.6269 7.80211 10.4767 7.74845 10.3204 7.72744L8.70876 7.50992C8.48668 7.48096 8.261 7.51818 8.05998 7.61693C7.85897 7.71568 7.69157 7.87156 7.57876 8.06503H6.96291L6.69454 7.50992C6.62034 7.35534 6.51176 7.2198 6.3771 7.11367C6.24245 7.00754 6.08529 6.93363 5.91766 6.8976L5.35266 6.77542L5.90495 5.80503H7.08509C7.27606 5.80465 7.46384 5.75607 7.63102 5.66378L8.49618 5.18635C8.57219 5.14398 8.64325 5.09329 8.70805 5.03522L10.6086 3.3162C10.7991 3.14544 10.9258 2.91483 10.9676 2.66241C11.0095 2.40999 10.964 2.15084 10.8388 1.92772L10.8134 1.88181C11.8769 2.38607 12.7755 3.18159 13.4051 4.17603C14.0346 5.17047 14.3692 6.32306 14.3701 7.50003ZM9.23633 1.37967L9.85006 2.47859L7.94954 4.1976L7.08509 4.67503H5.90495C5.70631 4.67474 5.5111 4.72681 5.339 4.826C5.1669 4.9252 5.02399 5.068 4.92467 5.24003L4.30812 6.31565L3.59127 4.40595L4.36391 2.57888C5.0478 2.05046 5.83453 1.67071 6.67369 1.46396C7.51285 1.25721 8.38594 1.22802 9.23704 1.37825L9.23633 1.37967ZM1.94006 7.50003C1.93912 6.57627 2.14521 5.66404 2.5432 4.8304L3.34409 6.96822C3.41083 7.14523 3.52094 7.30264 3.66432 7.42603C3.80771 7.54943 3.97978 7.63485 4.16475 7.67447L5.67824 8.00005L5.94732 8.5594C6.04071 8.74965 6.18543 8.90998 6.36514 9.0223C6.54486 9.13462 6.7524 9.19445 6.96432 9.19503H7.06885L6.55823 10.3413C6.46826 10.5431 6.43944 10.7669 6.47535 10.9849C6.51125 11.203 6.61029 11.4057 6.76022 11.568L6.7701 11.5779L8.15506 13.0045L8.01805 13.7108C6.39496 13.673 4.85091 13.0024 3.71538 11.8421C2.57984 10.6817 1.94275 9.12355 1.94006 7.50003ZM9.18477 13.6289L9.26458 13.2185C9.29738 13.0442 9.28891 12.8646 9.23986 12.6942C9.1908 12.5237 9.10252 12.3671 8.98208 12.2368C8.97861 12.2337 8.97531 12.2304 8.97219 12.227L7.59006 10.801L8.55762 8.63003L10.1693 8.84755L13.3983 10.8335C12.9305 11.5682 12.3137 12.1966 11.588 12.6781C10.8622 13.1596 10.0435 13.4835 9.18477 13.6289Z">
+                                    </path>
+                                </svg><span class="group-hover:text-supernova uppercase text-white">en</span>
+                                <!--]-->
+                            </button>
+                            <!---->
+                        </div>
+                        <!--]-->
+                    </div>
+                    <!--]-->
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../cardPage/card.html"></script>
+</body>
+
+</html>

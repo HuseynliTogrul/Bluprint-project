@@ -14,6 +14,8 @@ const colorListDots = document.querySelectorAll("#colorList li span")
 
 const productsCount = document.getElementById("products-count")
 
+const productsEl = document.getElementById("products")
+
 const filteredCategories = []
 const filteredColors = []
 const filteredSizes = []
@@ -79,7 +81,6 @@ sizeList.forEach((item, index) => {
     })
 })
 
-productsCount.textContent = products.length;
 
 const displayProducts = () => {
     const filterByCategory = products.filter((product) => {
@@ -89,18 +90,53 @@ const displayProducts = () => {
         )
             return true
 
-        const categoryCondition = filteredCategories.length === 0 ||
-            filteredCategories.includes(product.category)
+        const categoryCondition = filteredCategories.length === 0 || filteredCategories.includes(product.category)
 
-        const colorCondition = filteredColors.length === 0 ||
-            filteredColors.includes(product.color)
+        const colorCondition = filteredColors.length === 0 || filteredColors.includes(product.color)
 
         const sizeCondition = product.sizes.some((size) => filteredSizes.includes(size))
 
         return categoryCondition && colorCondition && sizeCondition
     })
-    console.log(filterByCategory);
-}
 
+    productsEl.innerHTML = ""
+    productsCount.textContent = filterByCategory.length;
+
+    filterByCategory.forEach((product) => {
+        const pName = (product.name.split(" ").map((name) => name[0].toUpperCase() + name.slice(1))).join(" ");
+
+        productsEl.innerHTML += `<div class="col-span-4 cursor-pointer productItems">
+                                <a href="./productPage/product.html">
+                                <div class="mb-4 border border-neutral-200 rounded-lg">
+                                    <img
+                                    src="${product.image}"
+                                    alt=""
+                                    class="w-full h-[500px]"
+                                    />
+                                </div>
+                                <div class="flex justify-between font-bold">
+                                    <div>
+                                    <h1 class="text-xl">${pName}</h1>
+                                    <p class="text-neutral-500">${product.category}</p>
+                                    </div>
+                                    <h1 class="text-2xl">
+                                    <span>${product.price}</span>
+                                    AZN
+                                    </h1>
+                                </div>
+                                </a>
+                            </div>`
+
+        const productItems = document.querySelectorAll(".productItems")
+
+        productItems.forEach((productItem, index) => {
+            productItem.addEventListener("click", (event) => {
+
+                const selectedProduct = filterByCategory[index];
+                localStorage.setItem("product", JSON.stringify(selectedProduct))
+            })
+        });
+    });
+}
 
 displayProducts()
