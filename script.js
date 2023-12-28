@@ -83,7 +83,7 @@ sizeList.forEach((item, index) => {
 
 
 const displayProducts = () => {
-    const filterByCategory = products.filter((product) => {
+    const filterProducts = products.filter((product) => {
         if (filteredCategories.length === 0 &&
             filteredColors.length === 0 &&
             filteredSizes.length === 0
@@ -94,15 +94,15 @@ const displayProducts = () => {
 
         const colorCondition = filteredColors.length === 0 || filteredColors.includes(product.color)
 
-        const sizeCondition = product.sizes.some((size) => filteredSizes.includes(size))
+        const sizeCondition = filteredSizes.length === 0 || filteredSizes.every((size) => product.sizes.includes(size));
 
         return categoryCondition && colorCondition && sizeCondition
     })
 
     productsEl.innerHTML = ""
-    productsCount.textContent = filterByCategory.length;
+    productsCount.textContent = filterProducts.length;
 
-    filterByCategory.forEach((product) => {
+    filterProducts.forEach((product) => {
         const pName = (product.name.split(" ").map((name) => name[0].toUpperCase() + name.slice(1))).join(" ");
 
         productsEl.innerHTML += `<div class="col-span-4 cursor-pointer productItems">
@@ -127,12 +127,12 @@ const displayProducts = () => {
                                 </a>
                             </div>`
 
-        const productItems = document.querySelectorAll(".productItems")
+        const productItems = document.querySelectorAll(".productItem")
 
         productItems.forEach((productItem, index) => {
             productItem.addEventListener("click", (event) => {
 
-                const selectedProduct = filterByCategory[index];
+                const selectedProduct = filterProducts[index];
                 localStorage.setItem("product", JSON.stringify(selectedProduct))
             })
         });

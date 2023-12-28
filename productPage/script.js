@@ -10,7 +10,10 @@ const decreaseEL = document.getElementById("decrease")
 const counterEl = document.getElementById("counter")
 const increaseEl = document.getElementById("increase")
 
+const addToCart = document.getElementById("addToCart")
+
 let count = 1;
+counterEl.value = count;
 
 const { category, name, image, price, color } = JSON.parse(localStorage.getItem("product"))
 
@@ -34,4 +37,25 @@ increaseEl.addEventListener("click", () => {
         count++;
     }
     counterEl.value = count
+})
+
+addToCart.addEventListener("click", () => {
+    const fetchedCartItems = JSON.parse(localStorage.getItem("cartItems"))
+
+    const addedProduct = {
+        name: pName,
+        price: price,
+        category: category,
+        color: color,
+        image: image,
+        count: count
+    }
+
+    if (!fetchedCartItems) {
+        cartItems.push(addedProduct)
+    } else {
+        cartItems.push(...fetchedCartItems)
+    }
+
+    localStorage.setItem("cartItems", JSON.stringify(cartItems))
 })
