@@ -12,10 +12,14 @@ const increaseEl = document.getElementById("increase")
 
 const addToCart = document.getElementById("addToCart")
 
+const sizesListLiEl = document.querySelectorAll("#sizesList li")
+const sizesListDatas = [...sizesListLiEl].map((item) => item.dataset.sizes)
+const sizesListBtnEl = document.querySelectorAll("#sizesList button")
+
 let count = 1;
 counterEl.value = count;
 
-const { category, name, image, price, color } = JSON.parse(localStorage.getItem("product"))
+const { category, name, image, price, color, sizes } = JSON.parse(localStorage.getItem("product"))
 
 const pName = name.split(" ").map((name) => name[0].toUpperCase() + name.slice(1)).join(" ")
 
@@ -59,3 +63,10 @@ addToCart.addEventListener("click", () => {
 
     localStorage.setItem("cartItems", JSON.stringify(cartItems))
 })
+
+sizesListDatas.forEach((size, index) => {
+    if (!sizes.includes(size)){
+        sizesListLiEl[index].classList.add("opacity-40");
+        sizesListBtnEl[index].classList.add("cursor-none-allowed");
+    }
+});

@@ -10,7 +10,6 @@ const categories = [...new Set(products.map((product) => product.category))]
 const colors = [...new Set(products.map((product) => product.color))]
 const sizes = [...new Set(products.map((product) => product.sizes).flat())]
 
-// const productsEl = document.getElementById("products")
 
 categories.forEach((category) => {
     categoryList.innerHTML += `<li class="cursor-pointer text-black" data-category="${category}">
